@@ -94,6 +94,7 @@ console.log( bag.apple ); // 5, если fruit="apple"
 
 
 
+
 // По сути, пример выше работает так же, как и следующий пример:
 let fruit1 = prompt("Какой фрукт купить?", "apple");
 let bag1 = {};
@@ -250,3 +251,22 @@ for (let code in codes) {
 }
 
 // =====================================================
+
+function User(name) {
+  this.name = name;
+
+  this.sayHi = function() {
+    alert( "Меня зовут: " + this.name );
+  };
+}
+
+let john = new User("John");
+
+john.sayHi(); // Меня зовут: John
+
+/*
+john = {
+   name: "John",
+   sayHi: function() { ... }
+}
+*/
